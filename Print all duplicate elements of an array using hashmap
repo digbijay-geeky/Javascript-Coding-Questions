@@ -1,0 +1,33 @@
+  var resultArray=[];
+
+function printDuplicates(arr){
+    var map=new Map();
+  
+    for(var i=0;i<arr.length;i++){
+        if(map.has(arr[i])){
+            map.set(arr[i],map.get(arr[i])+1)
+        }
+        else{
+            map.set(arr[i],1)
+        }
+    }
+     const frequencyObject = {};
+     map.forEach((value, key) => {
+        frequencyObject[key] = value;
+    });
+    return frequencyObject
+
+}
+const array=[1,2,3,4,4,6,5,4,5,1,8,9,8]
+var res=(printDuplicates(array))
+console.log(res)
+const obj = {a: 1, b: 2, c: 3};
+
+Object.keys(res).forEach(key => {
+    console.log(`Key: ${key}, Value: ${res[key]}`);
+    if(res[key]>1){
+        resultArray.push(key)
+    }
+});
+console.log(resultArray)
+

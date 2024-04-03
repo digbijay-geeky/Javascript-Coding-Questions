@@ -1,0 +1,31 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Try programiz.pro");
+
+function find(arr){
+    var map=new Map();
+    for(var i=0;i<arr.length;i++){
+        if(map.has(arr[i].age)){
+            var res=map.get(arr[i].age)
+            res.push(arr[i])
+            map.set(arr[i].age,res)
+        }
+        else{
+           map.set(arr[i].age,[arr[i]])
+        }
+    }
+    return map
+}
+var array=[
+    {
+        name:"digu",age:20
+    },
+    {
+        name:"pallu",age:21
+    },
+    {
+        name:"bablu",age:21
+    }]
+    var result=find(array)
+console.log(result)

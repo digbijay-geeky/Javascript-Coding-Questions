@@ -1,0 +1,17 @@
+function pairSum(arr,target){
+    const res=[]
+    for(var i=0;i<arr.length-1;i++){
+        for(var j=i+1;j<arr.length;j++){
+            if(arr[i]+arr[j]==target){
+                resArray=[]
+                resArray.push(arr[i],arr[j])
+                res.push(resArray)
+            }
+        }
+    }
+    return res;
+}
+var array=[1,2,3,4,5]
+var target=5;
+const res=pairSum(array,target)
+console.log(res)

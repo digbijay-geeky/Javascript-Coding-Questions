@@ -1,0 +1,19 @@
+function findMissingNumber(arr) {
+    const n = arr.length;
+  
+    // Iterate through the array
+    for (let i = 0; i < n; i++) {
+        // Check if the current element is equal to its index + 1
+        if (arr[i] !== i + 1) {
+            // If not, return the missing number
+            return i + 1;
+        }
+    }
+
+    // If no missing number found, return the next number in the sequence
+    return n + 1;
+}
+
+// Example usage:
+const arr = [1, 2, 3, 4, 5, 7];
+console.log(findMissingNumber(arr)); // Output: 6

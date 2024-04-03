@@ -1,0 +1,17 @@
+function removeDuplicates(arr){
+    const temp=[]
+    var count=0;
+    for(let i=0;i<arr.length-1;i++){
+        if(!temp.includes(arr[i])){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[i]==arr[j]){
+                temp.push(arr[i]);
+                break;
+            }
+        }
+        }
+    }
+    return temp;
+}
+const array=[1,2,3,4,4,6,5,4,5,1,8,9,8]
+console.log(removeDuplicates(array))

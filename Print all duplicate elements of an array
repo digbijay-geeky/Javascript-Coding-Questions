@@ -1,4 +1,4 @@
-function removeDuplicates(arr){
+function printDuplicates(arr){
     const temp=[]
     var count=0;
     for(let i=0;i<arr.length-1;i++){
@@ -14,4 +14,4 @@ function removeDuplicates(arr){
     return temp;
 }
 const array=[1,2,3,4,4,6,5,4,5,1,8,9,8]
-console.log(removeDuplicates(array))
+console.log(printDuplicates(array))

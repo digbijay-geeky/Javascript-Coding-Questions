@@ -1,0 +1,21 @@
+function countWordOccurrences(str1){
+    var str=str1.split(" ")
+    var map=new Map();
+    for(var i=0;i<str.length;i++){
+        if(map.has(str[i])){
+            map.set(str[i],map.get(str[i])+1)
+        }
+        else{
+            map.set(str[i],1)
+        }
+    }
+    
+    var obj={}
+map.forEach((value,key)=>{
+    obj[key]=value
+})
+return obj
+}
+const s = 'the quick brown fox jumps over the lazy dog jumps over the fence';
+const r = countWordOccurrences(s);
+console.log(r)

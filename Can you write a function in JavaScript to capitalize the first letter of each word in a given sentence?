@@ -1,0 +1,25 @@
+const input= 'hello world, this is a test';
+var res=[];
+function upperCase(input){
+    
+    var str="";
+    var splitValue=input.split(" ")
+    console.log(splitValue)
+    for(var i=0;i<splitValue.length;i++){
+        for(var j=0;j<splitValue[i].length;j++){
+            if(j==0){
+                str=str+splitValue[i][j].toUpperCase();
+            }
+            else{
+                str=str+splitValue[i][j]
+            }
+        }
+        str=str+" "
+       
+    }
+     res.push(str)
+    
+    
+}
+console.log(upperCase(input))
+console.log(res)

@@ -1,0 +1,15 @@
+function longestWord(str){
+    var longestWord="";
+    const res=str.split(" ");
+    console.log(res)
+    var maxLength=0;
+    for(var i=0;i<res.length;i++){
+        if(res[i].length>maxLength){
+            maxLength=res[i].length;
+            longestWord=res[i]
+        }
+    }
+    return longestWord
+    
+}
+console.log(longestWord("THis is a goodap Boy"))

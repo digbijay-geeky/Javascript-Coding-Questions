@@ -1,0 +1,17 @@
+function twoSum(arr,target){
+    var resultArray=[];
+    var map=new Map();
+    for(var i=0;i<arr.length;i++){
+        var sub=target-arr[i]
+        if(map.has(sub)){
+          
+            resultArray.push(i,map.get(sub))
+        }
+        else{
+            map.set(arr[i],i)
+        }
+    }
+    return resultArray;
+}
+var res=twoSum([2,7,15,11],9)
+console.log(res)

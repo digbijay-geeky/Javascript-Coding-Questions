@@ -1,0 +1,30 @@
+const users = [ 
+{ name: "John", hobbies: ["singing", "walking", "playing guitar"] },
+{ name: "Terry", hobbies: ["swimming", "playing guitar"] },
+{ name: "Anna", hobbies: ["walking", "swimming", "playing guitar"] },
+{ name: "Paul", hobbies: ["swimming", "singing"] },
+];
+ 
+function res(){
+ var map=new Map();
+ 
+ for(var i=0;i<users.length;i++){
+     for(var j=0;j<users[i].hobbies.length;j++){
+         if(map.has(users[i].hobbies[j])){
+         map.get(users[i].hobbies[j]).push(users[i].name)
+        }
+         else{
+            arr=[]
+             arr.push(users[i].name)
+             map.set(users[i].hobbies[j],arr)
+           }
+     }
+    
+ }
+ return map
+}
+var find=res(users)
+console.log(find)
+
+
+
